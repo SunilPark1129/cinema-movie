@@ -1,0 +1,1064 @@
+// Blur background when modal is opened
+.pop-up-close {
+  z-index: 997;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  backdrop-filter: saturate(180%) blur(10px);
+  background-color: rgba(39, 39, 39, 0.377);
+}
+
+// --------------------------- Aside styling starts here ------------------------ //
+.aside {
+  flex: 1 1 30%;
+  z-index: 995;
+  min-width: 20rem;
+  background-color: var(--main-clr);
+  
+  .content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    gap: 1em;
+  }
+
+  h3, label {
+    user-select: none;
+  }
+
+  // Styling the top and bottom edges for the aside
+  &__design {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+
+    &::before, &::after {
+      position: absolute;
+      content: "";
+      left: 100%;
+      width: 2rem;
+      height: 2rem;
+      background-color: var(--light-clr);
+      z-index: 1;
+    }
+    
+    &::before {
+      top: 0;
+      border-top-left-radius: 70%;
+    }
+
+    &::after {
+      bottom: 0;
+      border-bottom-left-radius: 70%;
+    }
+
+    span {
+      position: absolute;
+      left: 100%;
+      width: 2rem;
+      height: 2rem;
+      background-color: var(--main-clr);
+
+      &:nth-of-type(1) {
+        top: 0;
+      }
+
+      &:nth-of-type(2) {
+        bottom: 0;
+      }
+    }
+  }
+
+  &__logo {
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 3rem;
+      color: var(--weak-clr);
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--light-clr);
+    border: none;
+    height: 3rem;
+    font-size: 0.9em;
+    width: 100%;
+
+    &:hover:not(.aside__btn--active) {
+      color: var(--strong-clr);
+    }
+
+    // Styling edge for the actived button
+    &--active {
+      color: var(--main-clr);
+      position: relative;
+      pointer-events: none;
+      background-color: var(--light-clr);
+  
+      &:before, &:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        width: 3rem;
+        height: 3rem;
+        background-color: var(--main-clr);
+        z-index: 1;
+      }
+
+      &:before {
+        border-bottom-right-radius: 80%;
+        bottom: 100%;
+      }
+    
+      &:after {
+        border-top-right-radius: 80%;
+        top: 100%;
+      }
+  
+      span {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3rem;
+        height: 8rem;
+        background-color: var(--light-clr);
+      }
+    }
+  }
+
+  &__radio {
+    display: flex;
+    font-size: 0.9em;
+    height: 3rem;
+    padding: 0 1rem;
+    align-items: center;
+
+    label {
+      display: flex;
+      padding: 0.5rem;
+      cursor: pointer;
+      color: var(--light-clr);
+      width: 100%;
+      justify-content: center;
+      border-radius: 0.5rem;
+
+      &:hover {
+        color: var(--strong-clr);
+      }
+    }
+
+    input {
+      display: none;
+
+      &:checked + label {
+        color: var(--main-clr);
+        background-color: var(--light-clr);
+        pointer-events: none;
+      }
+    }
+    
+    // When the button cannot be pressed for some situation
+    &--opacity > input:checked + label,
+    &--opacity > label{
+      color: var(--light-clr);
+      opacity: 0.2;
+      pointer-events: none;
+      background-color: transparent;
+    }
+  }
+}
+
+// ------------------------ Movie styling starts here -------------------- //
+.movie {
+  min-height: 100vh;
+  flex: 1 1 70%;
+
+  .content {
+    padding: 2rem;
+    min-height: 60rem;
+    height: 100%;
+  }
+
+  // A card with a movie poster
+  .card {
+    position: relative;
+    overflow: hidden;
+    width: 22%;
+    padding-bottom: 33%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 10px 10px 5px 5px rgba(66, 66, 66, 0.452);
+    transition-property: filter, box-shadow;
+    transition-duration: 0.3s;
+    user-select: none;
+    
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    // When targeted movie doesn't have a poster, show this instead on the card 
+    &__poster-null {
+      display: flex;
+      position: absolute;
+      background-color: var(--main-clr);
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      
+      p {
+        pointer-events: none;
+      }
+    }
+
+    &__image {
+      filter: blur(20px);
+      &--ready {
+        transition: filter 1s;
+      }
+    }
+
+    // When hovering the card in the search page
+    &__front-title {
+      position: absolute;
+      width: 100%;
+      color: white;
+      bottom: 0;
+      left: 100%;
+      padding: 1rem;
+      background-color: rgba(19, 19, 19, 0.966);
+      transition-property: left;
+      transition-duration: 0.3s;
+      pointer-events: none;
+
+      span {
+        color: var(--strong-clr);
+      }
+    }
+
+    &:hover .card__front-title{
+      left: 0;
+    }
+  }
+
+  // --------------------- Recommend styling --------------------- //
+  &__recommend {
+    user-select: none;
+
+    // This is the header part of the recommend page
+    &__upcoming {
+      position: relative;
+      display: flex;
+      height: 20rem;
+      max-width: 60rem;
+      margin: auto;
+    
+      // Styling the texts and buttons in header
+      &__UI {
+        margin: auto 15% 5% 5%;
+        z-index: 9;
+    
+        h2 {
+          color: var(--light-clr);
+          font-family: "Noto Sans", sans-serif;
+          text-shadow: 0px 0px 10px var(--main-clr);
+          font-size: 1.8em;
+        }
+    
+        .btn-box {
+          display: flex;
+          width: 13rem;
+          margin-top: 0.5em;
+          gap: 0.3rem;
+        }
+    
+        button {
+          border: none;
+          color: var(--light-clr);
+          cursor: pointer;
+          padding: 1em;
+          border-radius: 0.5rem;
+    
+          &:hover {
+            filter: brightness(120%);
+          }
+    
+          &:nth-of-type(1) {
+            flex: 1 1 80%;
+            background: var(--strong-clr);
+          }
+    
+          &:nth-of-type(2) {
+            font-size: 1em;
+            flex: 1 1 30%;
+            background: rgb(133, 153, 240);
+    
+            p {
+              transform: rotate(90deg);
+            }
+    
+            &:hover p {
+              animation: refresh-ani 1s forwards;
+            }
+          }
+        }
+      }
+
+      &__poster {
+        position: absolute;
+        width: 60%;
+        height: 100%;
+        right: 0;
+
+        &:before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          background: linear-gradient(
+            90deg,
+            var(--light-clr),
+            transparent 20% 80%,
+            var(--light-clr)
+          );
+        }
+
+        img {
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          object-position: center;
+          object-fit: cover;
+        }
+      }
+    }
+
+    // This is the body part of the recommend page
+    &__list {
+      padding: 1em 0;
+      border-bottom: 0.1rem dashed rgb(168, 168, 168);
+      
+      &:nth-last-of-type(1) {
+        border-bottom: none;
+      }
+      
+      .card {
+        img, &__poster-null {
+          pointer-events: none;
+        }
+      }
+      
+      // Genre name and show table toggler
+      &__header {
+        padding: .5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        label {
+          display: flex;
+          gap: .3rem;
+          align-items: center;
+          position: relative;
+          cursor: pointer;
+        }
+
+        input {
+          position:absolute;
+          opacity: 0;
+
+          &:hover ~ span {
+            background-color: var(--weak-clr);
+          }
+
+          &:checked ~ span{
+            background-color: var(--strong-clr);
+          }
+        }
+
+        span {
+          width: 15px;
+          height: 15px;
+          background-color: rgb(199, 200, 214);
+        }
+      }
+      
+      // Movie posters container
+      &__body {
+        position: relative;
+        padding: 2% 0;
+        overflow: hidden;
+        
+        &:before,
+        &:after {
+          position: absolute;
+          content: "";
+          top: 0;
+          width: 10%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 4;
+        }
+
+        &:before {
+          right: 0;
+          background: linear-gradient(-90deg, var(--light-clr), transparent 30%);
+        }
+
+        &:after {
+          left: 0;
+          background: linear-gradient(90deg, var(--light-clr), transparent 30%);
+        }
+      }
+      
+      // Current slide position
+      &__page-bar {
+        height: 0.2rem;
+        background: var(--main-clr);
+        position: relative;
+        
+        span {
+          position: absolute;
+          width: 20%;
+          height: 100%;
+          background-color: var(--strong-clr);
+          transition: left 0.6s;
+        }
+      }
+      
+      // Movie's information preview
+      &__table {
+        border-collapse: collapse;
+        width: 100%;
+        
+        td {
+          color: var(--main-clr);
+          padding: 0.5rem;
+          width: 0;
+          
+          &:nth-child(1) {
+            width: 1.5rem;
+            padding: 0;
+            text-align: center;
+          }
+
+          &:nth-child(3) {
+            text-align: center;
+          }
+        }
+        
+        tbody td:nth-child(2) {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: center;
+          width: 50%;
+          max-width: 10rem;
+        }
+        
+        tbody td:nth-child(3) {
+          color: var(--strong-clr);
+        }
+      }
+
+      .card-box {
+        padding-bottom: 30%;
+        position: relative;
+        margin: auto;
+        width: 70%;
+      }
+
+      // Styling where the current card is positioned
+      .card-position {
+        gap: 2%;
+        display: none;
+        position: absolute;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        transition-property: transform, filter, height, padding;
+        transition-duration: 1.2s;
+        transition-timing-function: cubic-bezier(0.2, 0.6, 0.2, 1.2);
+        filter: brightness(20%);
+
+        &--center {
+          display: flex;
+          height: 100%;
+          filter: brightness(100%);
+          z-index: 99;
+        
+          & > .card:hover {
+            box-shadow: 0px 0px 10px black;
+          }
+        }
+      
+        &--left {
+          display: flex;
+          transform: translateX(-102%);
+          
+          &:hover {
+            filter: brightness(100%);
+          }
+        }
+
+        &--right {
+          display: flex;
+          transform: translateX(102%);
+
+          &:hover {
+            filter: brightness(100%);
+          }
+        }
+
+        &--left-left {
+          display: flex;
+          transform: translateX(-202%);
+        }
+
+        &--right-right {
+          display: flex;
+          transform: translateX(202%);
+        }
+      }
+    }
+
+    
+  }
+  
+  // ----------------------- Search styling ---------------------- //
+  &__search {
+    user-select: none;
+
+    // This is Home part of the Search Page
+    &__home {
+      min-height: 40rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 10rem;
+        height: 10rem;
+      }
+
+      h3 {
+        color: var(--main-clr);
+        position: relative;
+        overflow: hidden;
+      }
+
+      span {
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        padding: 0.08rem;
+        animation: underline-animation 1.5s infinite;
+      }
+    }
+    
+    // This is Error part of the Search Page 
+    &__error-page {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      
+      h3 {
+        color: var(--strong-clr);
+      }
+      
+      p:nth-of-type(2) {
+        margin-top: 1rem;
+        background-color: var(--weak-clr);
+        padding: 2rem;
+        border-radius: 1rem;
+      }
+    }
+
+    // This is Movie List part to display searched movies
+    &__list {
+      display: flex;
+      padding: 2%;
+      flex-direction: column;
+      gap: 1em;
+      
+      // Shows the searched input
+      &__header {
+        background-color: var(--weak-clr);
+        padding: 1em;
+        border-radius: 1rem;
+      }
+      
+      // Shows the movie cards
+      &__body {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4%;
+      }
+    }
+
+    .card {
+      margin-bottom: 3%;
+    }
+  }
+
+  // ------------------------------- Modal styling ------------------------------- //
+  &__modal {
+    position: fixed;
+    z-index: 999;
+    max-width: 35rem;
+    background: var(--light-clr);
+    transition-property: left, top, width, height, transform;
+    transition-duration: 0.8s, 0.8s, 1s, 1s, 0.8s;
+    
+    .content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow-y: scroll;
+      gap: 1em;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+      }
+    }
+    
+    // Closing the modal icon
+    &__close-icon {
+      display: flex;
+      position: fixed;
+      z-index: 9;
+      right: 1rem;
+      top: 1rem;
+      width: 0.4rem;
+      height: 0.4rem;
+      padding: 14px;
+      font-size: 12px;
+      background: var(--main-clr);
+      justify-content: center;
+      align-items: center;
+      color: var(--light-clr);
+      border-radius: 50%;
+      cursor: pointer;
+      user-select: none;
+    
+      &:hover {
+        filter: brightness(120%);
+      }
+    }
+
+    // Movie poster
+    &__header {
+      position: relative;
+      user-select: none;
+    
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      &__poster {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--main-clr);
+        min-height: 20rem;
+        max-height: 20rem;
+        user-select: none;
+    
+        &:before {
+          position: absolute;
+          content: "";
+          bottom: 0;
+          width: 100%;
+          height: 30%;
+          background: linear-gradient(0deg, var(--light-clr), transparent);
+        }
+    
+        .no-poster {
+          width: 10rem;
+          height: 10rem;
+        }
+    
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+
+    // Movie information
+    &__body {
+      padding: 2rem 1rem;
+  
+      h3 {
+        font-size: 1.5em;
+        line-height: 1.2em;
+      }
+
+      span {
+        color: var(--strong-clr);
+        font-weight: bold;
+      }
+  
+      &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+  
+        img {
+          margin: 0 auto;
+          width: 90%;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+    }
+  }
+}
+
+@keyframes refresh-ani {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes underline-animation {
+  0% {
+    left: 0;
+    background-color: var(--strong-clr);
+    transform: translateX(-100%);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    background-color: var(--weak-clr);
+    opacity: 0.3;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media (max-width: 65rem) {
+  // ----------------------- Aside styling starts here -------------------- //
+  .aside {
+    position: fixed;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 998;
+    display: none;
+
+    &--display {
+      display: flex;
+    }
+
+    .content {
+      position: absolute;
+      content: "";
+      left: 50%;
+      transform: translateX(-50%);
+      height: auto;
+      top: 2rem;
+      bottom: 8rem;
+      padding: 2rem;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      animation: fade-in 0.5s forwards;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+
+    section {
+      gap: .5rem;
+    }
+
+    &__btn {
+      display: flex;
+      height: 1.5rem;
+      padding: 1rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.5rem;
+    }
+
+    &__radio {
+      height: 1.5rem;
+      padding: 1rem;
+    }
+
+    label {
+      height: 1.5rem;
+      padding: 1rem;
+      align-items: center;
+    }
+
+    img,
+    .content::before,
+    .content::after,
+    &__design,
+    &__btn--active span,
+    &__btn--active:before,
+    &__btn--active:after {
+      display: none;
+    }
+  }
+
+  // ------------------- Minimized aside styling starts here ----------------- //
+  .minimized-aside {
+    display: flex;
+    position: fixed;
+    padding: 1rem;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    transition-property: bottom, opacity, left;
+    transition-duration: .2s, .2s, .5s;
+    transition-timing-function: ease, ease, cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    min-width: 20rem;
+    gap: 2rem;
+    user-select: none;
+
+    &--opacity {
+      bottom: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &__btn {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      box-shadow: 0px 0px 5px #222;
+      background-color: var(--light-clr);
+      cursor: pointer;
+      z-index: 2;
+
+      &:hover {
+        filter: brightness(120%);
+      }
+
+      &__menu {
+        position: relative;
+        width: 60%;
+        height: 40%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    
+        span {
+          position: absolute;
+          height: 3px;
+          background-color: var(--main-clr);
+          transition-property: transform, top;
+          transition-duration: .2s, .2s;
+          transition-delay: 0s, .1s;
+          left: 0;
+          right: 0;
+          top: 0;
+
+          &:nth-child(2) {
+            transform: translateY(-50%);
+            top: 50%;
+          }
+
+          &:nth-child(3) {
+            top: 100%;
+            transform: translateY(-100%);
+          }
+        }
+    
+        &--active span {
+          transition-delay: .1s, 0s;
+          &:nth-child(1),
+          &:nth-child(2) {
+            top: 50%;
+            transform: rotate(45deg) translateY(-50%);
+          }
+    
+          &:nth-child(3) {
+            top: 50%;
+            transform: rotate(-45deg) translateY(-50%);
+          }
+        }
+      }
+
+      &__to-left {
+        position: relative;
+        width: 60%;
+        height: 40%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    
+        span {
+          position: absolute;
+          height: 3px;
+          background-color: var(--main-clr);
+          transition-property: transform, left, right, top, bottom;
+          transition-duration: 0.6s;
+          left: 0;
+          right: 0;
+          top: 0;
+    
+          &:nth-child(1) {
+            transform: translateY(-20%) rotate(-45deg);
+            left: 20%;
+            right: 25%;
+            top: 20%;
+          }
+      
+          &:nth-child(2) {
+            top: 80%;
+            left: 20%;
+            right: 25%;
+            transform: translateY(-80%) rotate(45deg)
+          }
+    
+        }
+
+        &--active span {
+          &:nth-child(1) {
+            top: 20%;
+            left: 25%;
+            right: 20%;
+            transform: translateY(-20%) rotate(225deg);
+          }
+          
+          &:nth-child(2) {
+            top: 80%;
+            transform: translateY(-80%) rotate(-225deg);
+            left: 25%;
+            right: 20%;
+          }  
+        }
+      }
+    }
+
+    &__blurry {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 990;
+      backdrop-filter: saturate(180%) blur(3px);
+      background-color: rgba(193, 195, 201, 0.377);
+      border-radius: 4rem;
+      z-index: 1;
+      overflow: hidden;
+      pointer-events: none;
+
+      &--off {
+        display: none;
+      }
+    }
+  }
+
+  .movie {
+    .content {
+      padding: 2rem 0;
+    }
+
+    &__search__list__body {
+      gap: 5%;
+      .card {
+        width: 30%;
+        padding-bottom: 45%;
+        margin-bottom: 3%;
+      }
+    }
+  }
+}
+
+@media (max-width: 40rem) {
+  .movie__recommend {
+    &__upcoming {
+      height: 15rem;
+
+      &__poster {
+        width: 70%;
+      }
+    }
+
+    &__list__body {
+      .card-box {
+        width: 50%;
+        padding-bottom: 80%;
+      }
+
+      .card {
+        flex: 1 1 40%;
+        
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  .card-position {
+    flex-wrap: wrap;
+    
+    .card {
+      border-radius: 0;
+    }    
+  }  
+}
