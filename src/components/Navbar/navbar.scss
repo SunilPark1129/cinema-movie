@@ -1,0 +1,137 @@
+// --------------------- Navbar styling starts here ---------------------- //
+nav {
+  z-index: 996;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to bottom, var(--dark-clr), var(--main-clr) 20%);
+
+  .active {
+    color: var(--strong-clr);
+  }
+
+  .wrapper {
+    height: 4rem;
+    gap: 2em;
+    align-items: center;
+    padding: 0 1rem;
+    overflow:visible;
+  }
+
+  img {
+    width: 3em;
+  }
+
+  ul {
+    display: flex;
+    gap: 1em;
+  }
+  
+  a {
+    color: var(--light-clr);
+  }
+}
+
+// ---------------------- NavSearch styling starts here -------------------- //
+.search-box {
+  display: flex;
+  margin-left: auto;
+  position: relative;
+  width: 100%;
+  max-width: 30rem;
+  user-select: none;
+
+  input {
+    font-size: 0.83rem;
+    width: 100%;
+    padding: 0 1rem;
+    outline: none;
+    border: 2px solid var(--strong-clr);
+    
+    &:focus ~ button span:nth-child(3), &:hover ~ button span:nth-child(3){
+      animation: search-btn-ani 0.5s infinite alternate;
+    }
+  }
+
+  button {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--strong-clr);
+    border: none;
+    position: relative;
+    cursor: pointer;
+
+    span:nth-child(1) {
+      position: absolute;
+      left: 15%;
+      top: 15%;
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid white;
+      border-radius: 50%;
+    }
+
+    span:nth-child(2) {
+      position: absolute;
+      left: 57%;
+      top: 67%;
+      width: 0.6rem;
+      height: 0.1rem;
+      transform: rotate(45deg);
+      background-color: white;
+    }
+
+    span:nth-child(3) {
+      position: absolute;
+      left: 13%;
+      top: 35%;
+      transform: rotateZ(15deg);
+      width: 55%;
+      height: 0.2rem;
+      background-color: var(--strong-clr);
+    }
+
+    &:hover span:nth-child(3) {
+      animation: search-btn-ani 0.5s infinite alternate;
+    }
+  }
+
+  // ---------------- Search term list styling ----------------- //
+  &__query-list {
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    top: 100%;
+    pointer-events: none;
+
+    p {
+      background-color: white;
+      font-size: 0.83rem;
+      padding: 0.2rem 1rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      border-left: 2px solid var(--strong-clr);
+      border-right: 2px solid var(--strong-clr);
+      pointer-events: all;
+      &:nth-last-of-type(1) {
+        border-bottom: 2px solid var(--strong-clr);
+      }
+    }
+
+    p:hover {
+      background: var(--strong-clr);
+    }
+  }
+}
+
+@keyframes search-btn-ani {
+  0% {
+    transform: rotateZ(15deg);
+  }
+  100% {
+    transform: rotateZ(-180deg);
+  }
+}

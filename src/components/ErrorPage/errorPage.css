@@ -1,0 +1,56 @@
+.error-page {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.error-page header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  color: var(--main-clr);
+}
+
+.error-page header h2 {
+  font-size: 10rem;
+}
+
+.error-page header h3 {
+  font-size: 4rem;
+  color: var(--strong-clr);
+}
+
+.error-page .text-box {
+  text-align: center;
+}
+
+.error-page .text-box h3 {
+  font-size: 2em;
+  color: #999999;
+  padding: 2rem;
+}
+
+@media (max-width: 65rem) {
+  .error-page header h2 {
+    font-size: 6rem;
+  }
+  .error-page header h3 {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=errorPage.css.map */
