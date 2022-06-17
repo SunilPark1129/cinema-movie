@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/cinema-movie/static/css/main.573ec935.css",
+    "main.js": "/cinema-movie/static/js/main.2a6fe867.js",
+    "static/js/787.ac22131b.chunk.js": "/cinema-movie/static/js/787.ac22131b.chunk.js",
+    "static/media/home_tip_img.jpg": "/cinema-movie/static/media/home_tip_img.6368c13c9ab9fdddff46.jpg",
+    "static/media/movie-search.jpg": "/cinema-movie/static/media/movie-search.5c2487f605474e430eeb.jpg",
+    "static/media/movie-recommend.jpg": "/cinema-movie/static/media/movie-recommend.36e065e0447860c49aef.jpg",
+    "static/media/main_logo.png": "/cinema-movie/static/media/main_logo.9c4ba432f54c712d824e.png",
+    "index.html": "/cinema-movie/index.html",
+    "main.573ec935.css.map": "/cinema-movie/static/css/main.573ec935.css.map",
+    "main.2a6fe867.js.map": "/cinema-movie/static/js/main.2a6fe867.js.map",
+    "787.ac22131b.chunk.js.map": "/cinema-movie/static/js/787.ac22131b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.573ec935.css",
+    "static/js/main.2a6fe867.js"
+  ]
+}
