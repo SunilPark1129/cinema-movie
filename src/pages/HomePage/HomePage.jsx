@@ -53,7 +53,7 @@ const HomePage = () => {
                             <img src={movieRecommend} alt='movie recommend lists' />
                         </div>
                     </section>
-                    
+
                     <section ref={positionAboutSecond} className='content'>
                         <div className="home__about__text" style={{ transform: `translate3d(0, ${scrollAboutSecond}px, 0px)`, opacity: `${scrollAboutSecond === 0 ? 1 : 1 - (scrollAboutSecond / 3 * .01)}` }}>
                             <p>
