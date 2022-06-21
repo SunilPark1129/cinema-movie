@@ -1,6 +1,6 @@
 import ImageLoading from "./ImageLoading";
-import CardOffset from "./CardOffset";
 import debounce from "./debounce";
 import delay from "./delay";
+import scrollEffect from "./scrollEffect";
 
-export { ImageLoading, CardOffset, debounce, delay };
+export { ImageLoading, debounce, delay, scrollEffect };

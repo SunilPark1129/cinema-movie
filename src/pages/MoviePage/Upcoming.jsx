@@ -6,7 +6,7 @@ Recommend movies within the genre selected by the user.
 import React from 'react';
 import { UpcomingHelper } from '../../helpers';
 import { Loading } from '../../components';
-import { CardOffset } from '../../hooks';
+import { CardOffset } from '../../helpers';
 
 const Upcoming = ({ requestURL }) => {
     const { requestFetch, upcomingMovie, isLoading, isImageLoading } = UpcomingHelper(requestURL);
