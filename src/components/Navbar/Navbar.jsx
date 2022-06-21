@@ -27,7 +27,7 @@ const Navbar = () => {
     return (
         <nav>
             <div className="wrapper">
-                <Link to='/cinema-movie'><img src={logo} alt='logo'></img></Link>
+                <Link to='/cinema-movie/'><img src={logo} alt='logo'></img></Link>
                 <ul>
                     {links.map(({ path, label, exact }) => (
                         <li key={label} >
