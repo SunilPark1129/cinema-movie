@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Cinema Movie
+Check preview website - [Link](https://sunilpark1129.github.io/cinema-movie/)
+![Cinema movie banner](https://user-images.githubusercontent.com/106734133/174677723-d29c940d-f2c1-43a2-9613-1a4d7e7c3814.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Description
+?
+### Features
+?
+### Challenge
+|Challenge|Screenshots / Description|
+|:--:|:--:|
+![cinema movie slide](https://user-images.githubusercontent.com/106734133/174715662-b8beddbd-a10e-450a-af44-73f292d9ed78.gif)
+![cinema target position](https://user-images.githubusercontent.com/106734133/174716092-11d83db8-3e37-439a-8c59-b017e400967d.gif)
+![cinema responsive](https://user-images.githubusercontent.com/106734133/174692296-77b41909-4c5c-4d4b-8856-3da6c2e7fdfa.jpg)
+![cinema search input](https://user-images.githubusercontent.com/106734133/174692302-982e9e37-6720-4e1f-899c-57190b3655c2.gif)
+![cinema show list](https://user-images.githubusercontent.com/106734133/174692310-1bd4c05e-691b-43f6-96fd-e75189928e58.gif)
+![cinema sort](https://user-images.githubusercontent.com/106734133/174692315-0c36d4b6-8af4-4105-961f-927bf22dc075.jpg)
+![cinema upcoming](https://user-images.githubusercontent.com/106734133/174692328-105157a8-078d-41ec-bfa0-ce2b1c6191ba.jpg)
+![cinema image loading](https://user-images.githubusercontent.com/106734133/174692339-243e9fcb-4e01-4f83-b40b-4fdfabec5946.gif)
+![cinema aside toggle btn](https://user-images.githubusercontent.com/106734133/174692366-61a9e12a-cf1b-4b32-8f82-cd148554abfd.gif)
+![cinema css styling](https://user-images.githubusercontent.com/106734133/174692371-181bd4ac-a3db-41cb-9d2a-6661ab342636.jpg)
+![cinema movie content](https://user-images.githubusercontent.com/106734133/174692381-299cea0f-8d36-4838-838d-9ea05208b837.jpg)
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- |Slideshow|<img src="https://user-images.githubusercontent.com/106734133/173249078-89dc6357-49bb-46dd-9ecf-aedb31601ff9.jpg" width="500" ><br>When you get to index 4 of the slide, right-clicking will go to the right and you will arrive at index 1 slide with animation effect. Along with this function, it is possible to move the slide by clicking the dots as well.|
+|Mouse Follower|<img src="https://user-images.githubusercontent.com/106734133/173250452-3a4f356b-2554-46dd-b813-6ed73d51efef.jpg" width="500"><br>The picture in the About section will move towards the user's mouse. It's made with a challenging stance and has no features other than a visual design.|
+|Side Navigation|<img src="https://user-images.githubusercontent.com/106734133/173249502-7974c406-ad9c-459e-b997-6e748cd256ed.jpg"><br>This Feature allows you to move between sections easily. It automatically disappears when you are not hovering over the mouse or scrolling.|
+|Photo Editor|<img src="https://user-images.githubusercontent.com/106734133/173249772-2547285d-120f-4352-a0e0-08dbd2bd96d8.jpg" width="500" ><br>Allows you to change the color and filter of the photo when you click the button.|
+|Input Form|<img src="https://user-images.githubusercontent.com/106734133/173250101-3515e8d6-2d04-4d8b-ad30-ea0c9f2e2e98.jpg" width="500"><br>When the user writes a message, they must fill in all the values of the input before they can click the send button. What the user needs to write is expressed as a status display.| -->
+### Technologies Used
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+### Installation
+1. Clone the repository
+```
+git clone https://github.com/SunilPark1129/cinema-movie.git
+```
+2. ```cd``` into the clone folder
+```
+cd cinema-movie
+```
+3. Install the required dependencies
+```
+install npm
+```
+4. To run the project
+```
+npm start
+```
+### Project Status
+In progress
+### Needs to be improved.
+?
