@@ -48,12 +48,13 @@ function MoviePage() {
 
     // Displays searched movie lists if the params id exists.
     useEffect(() => {
-        params.id !== undefined &&
+        params.id !== undefined ?
             setContext({
                 ...context,
                 displaySearch: true,
                 asideToggle: false
-            });
+            }) :
+            setOption(0, "movie-genre");
         window.scrollTo(0, 0);
     }, [params.id]);
 
