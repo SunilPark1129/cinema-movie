@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Cinema Movie
+Check preview website - [Link](https://sunilpark1129.github.io/cinema-movie/)
+![Cinema movie banner](https://user-images.githubusercontent.com/106734133/174677723-d29c940d-f2c1-43a2-9613-1a4d7e7c3814.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Description
+?
+### Features
+?
+### Challenge
+|Challenge|Screenshots / Description|
+|:--:|:--:|
+|Movie Slide|<img src="https://user-images.githubusercontent.com/106734133/174715662-b8beddbd-a10e-450a-af44-73f292d9ed78.gif" height="100%" /><br>|
+|Image File Loading|<img src="https://user-images.githubusercontent.com/106734133/174716092-11d83db8-3e37-439a-8c59-b017e400967d.gif" height="100%" /><br>|
+|Responsive|<img src="https://user-images.githubusercontent.com/106734133/174692296-77b41909-4c5c-4d4b-8856-3da6c2e7fdfa.jpg" height="300" /><br>|
+|Searching|<img src="https://user-images.githubusercontent.com/106734133/174692302-982e9e37-6720-4e1f-899c-57190b3655c2.gif" height="300" /><br>|
+|Show Lists|<img src="https://user-images.githubusercontent.com/106734133/174692310-1bd4c05e-691b-43f6-96fd-e75189928e58.gif" height="300" /><br>|
+|Sorting|<img src="https://user-images.githubusercontent.com/106734133/174692315-0c36d4b6-8af4-4105-961f-927bf22dc075.jpg" /><br>|
+|Fetching Loading|<img src="https://user-images.githubusercontent.com/106734133/174740224-e37333f2-2e4b-429d-b263-c014062cbbe1.gif" /><br>|
+|Aside Button|<img src="https://user-images.githubusercontent.com/106734133/174692366-61a9e12a-cf1b-4b32-8f82-cd148554abfd.gif" height="300" /><br>|
+|CSS Styling|<img src="https://user-images.githubusercontent.com/106734133/174692371-181bd4ac-a3db-41cb-9d2a-6661ab342636.jpg" height="300" /><br>|
+|Recommended Movie|<img src="https://user-images.githubusercontent.com/106734133/174739085-9754dd2d-bb86-4b16-be78-8de551cb8b56.jpg" height="200"/><br>|
+|Movie Content|<img src="https://user-images.githubusercontent.com/106734133/174739106-e41d62f6-4700-4b11-a479-cab34ddea297.jpg" height="300" ><br>|
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Technologies Used
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+### Installation
+1. Clone the repository
+```
+git clone https://github.com/SunilPark1129/cinema-movie.git
+```
+2. ```cd``` into the clone folder
+```
+cd cinema-movie
+```
+3. Install the required dependencies
+```
+install npm
+```
+4. To run the project
+```
+npm start
+```
+### Project Status
+In progress
+### Needs to be improved.
+?

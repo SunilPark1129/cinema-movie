@@ -12,12 +12,12 @@ const Home = () => <p>Home</p>;
 const Movie = () => <p>Movie</p>;
 const links = [
     {
-        path: '/',
+        path: '/cinema-movie/',
         label: Home,
         exact: 'true',
     },
     {
-        path: '/movie',
+        path: '/cinema-movie/movie',
         label: Movie,
         exact: 'false',
     }
@@ -27,11 +27,11 @@ const Navbar = () => {
     return (
         <nav>
             <div className="wrapper">
-                <Link to='/'><img src={logo} alt='logo'></img></Link>
+                <Link to='/cinema-movie/'><img src={logo} alt='logo'></img></Link>
                 <ul>
                     {links.map(({ path, label, exact }) => (
                         <li key={label} >
-                            <NavLink to={path} exact={exact}>
+                            <NavLink to={path} exact={exact} className={({ isActive }) => isActive ? 'active' : ''}>
                                 {label}
                             </NavLink>
                         </li>

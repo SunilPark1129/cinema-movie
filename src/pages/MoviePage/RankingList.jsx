@@ -5,8 +5,8 @@ Fetch 3 requestURLs and get 20 items each.
 
 import React, { useState, useEffect, useMemo } from 'react'
 import APIUtils from '../../api/APIUtils';
-import { CardSlide } from '../../helpers';
-import { ImageLoading, CardOffset } from '../../hooks';
+import { CardSlide, CardOffset } from '../../helpers';
+import { ImageLoading } from '../../hooks';
 import { Loading } from '../../components';
 
 function RankingList({ genreItem, requestURL, optionURL }) {

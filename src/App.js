@@ -11,12 +11,11 @@ function App() {
             <Router>
                 <Navbar />
                 <Routes>
-                    <Route exact path="/" element={<HomePage />} />
                     <Route exact path="/cinema-movie" element={<HomePage />} />
-                    <Route path="/movie" element={<MoviePage />}>
+                    <Route path="/cinema-movie/movie" element={<MoviePage />}>
                         <Route path=":id" element={<DisplayMovie />} />
                     </Route>
-                    <Route path="*" element={<ErrorPage />} />
+                    <Route path="/cinema-movie/*" element={<ErrorPage />} />
                 </Routes>
                 <Footer />
             </Router>

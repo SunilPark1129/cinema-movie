@@ -8,7 +8,7 @@ import './homePage.css';
 import logo from '../../assets/main_logo.png';
 import movieRecommend from '../../assets/movie-recommend.jpg';
 import movieSearch from '../../assets/movie-search.jpg';
-import { scrollEffect } from '../../helpers';
+import { scrollEffect } from '../../hooks';
 
 const HomePage = () => {
     const positionAboutFirst = useRef();
@@ -42,27 +42,27 @@ const HomePage = () => {
                 </section>
 
                 <section className='home__about'>
-                    <section ref={positionAboutFirst} className='content'>
-                        <div className="home__about__text" style={{ transform: `translate3d(0, ${scrollAboutFirst}px, 0px)`, opacity: `${scrollAboutFirst === 0 ? 1 : 1 - (scrollAboutFirst / 3 * .01)}` }}>
+                    <section ref={positionAboutFirst} className='content' style={{ transform: `translate3d(${scrollAboutFirst / 10}px, 0, 0px)`, opacity: `${scrollAboutFirst === 0 ? 1 : 1 - (scrollAboutFirst / 3 * .01)}` }}>
+                        <div className="home__about__text" >
                             <p>
                                 Cinema Movie is a site that allows users to easily search for and recommend movies.
                                 You can search directly by movie title, or it recommends 20 famous movies by genre through the pre-prepared feature.
                             </p>
                         </div>
-                        <div className='home__about__image-box' style={{ transform: `translate3d(0px, ${scrollAboutFirst}px, 0px)`, opacity: `${scrollAboutFirst === 0 ? 1 : 1 - (scrollAboutFirst / 3 * .01)}` }}>
+                        <div className='home__about__image-box' >
                             <img src={movieRecommend} alt='movie recommend lists' />
                         </div>
                     </section>
-                    
-                    <section ref={positionAboutSecond} className='content'>
-                        <div className="home__about__text" style={{ transform: `translate3d(0, ${scrollAboutSecond}px, 0px)`, opacity: `${scrollAboutSecond === 0 ? 1 : 1 - (scrollAboutSecond / 3 * .01)}` }}>
+
+                    <section ref={positionAboutSecond} className='content' style={{ transform: `translate3d(-${scrollAboutSecond / 10}px, 0, 0px)`, opacity: `${scrollAboutSecond === 0 ? 1 : 1 - (scrollAboutSecond / 3 * .01)}` }}>
+                        <div className="home__about__text" >
                             <p>
                                 Before you watch a movie, look for a movie in Cinema Movie first.
                                 We provide users with a movie's rating, release date, poster and overview.
                                 We update from old movies to newest movies and provide listings of all types.
                             </p>
                         </div>
-                        <div className='home__about__image-box' style={{ transform: `translate3d(0px, ${scrollAboutSecond}px, 0px)`, opacity: `${scrollAboutSecond === 0 ? 1 : 1 - (scrollAboutSecond / 3 * .01)}` }}>
+                        <div className='home__about__image-box' >
                             <img src={movieSearch} alt='movie search lists' />
                         </div>
                     </section>

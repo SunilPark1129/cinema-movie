@@ -71,7 +71,7 @@ const SearchQuery = () => {
             inputEl.current.value = '';
             setCurrentInput('');
             setInputEmpty(true);
-            navigate(`movie/${movieURL}`);
+            navigate(`/cinema-movie/movie/${movieURL}`);
         }
     }
 
