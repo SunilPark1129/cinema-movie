@@ -1,6 +1,6 @@
 import AsideOption from "./AsideOption";
 import UpcomingHelper from "./UpcomingHelper";
 import CardSlide from "./CardSlide";
-import scrollEffect from "./scrollEffect";
+import CardOffset from "./CardOffset";
 
-export { AsideOption, UpcomingHelper, CardSlide, scrollEffect };
+export { AsideOption, UpcomingHelper, CardSlide, CardOffset };

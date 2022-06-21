@@ -8,7 +8,7 @@ import './homePage.css';
 import logo from '../../assets/main_logo.png';
 import movieRecommend from '../../assets/movie-recommend.jpg';
 import movieSearch from '../../assets/movie-search.jpg';
-import { scrollEffect } from '../../helpers';
+import { scrollEffect } from '../../hooks';
 
 const HomePage = () => {
     const positionAboutFirst = useRef();

@@ -7,7 +7,7 @@ The params id is delivered as an element of requestURL.
 
 import React, { useEffect } from 'react';
 import APIUtils from '../../api/APIUtils';
-import { CardOffset } from '../../hooks';
+import { CardOffset } from '../../helpers';
 import { Loading } from '../../components';
 import { ImageLoading } from '../../hooks';
 
