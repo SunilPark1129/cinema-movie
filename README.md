@@ -1,9 +1,11 @@
 # Cinema Movie
 ![Cinema movie banner](https://user-images.githubusercontent.com/106734133/174794369-79747bcd-9f0e-43d8-9bee-28e37ae55167.jpg)
 Check preview website - [Link](https://sunilpark1129.github.io/cinema-movie/)
-### Project Description
+
+## Project Description
 Cinema Movie fetches movie information from The Movie Database and shares the information with users on a new platform. You can search for a movie through this website or click on a recommended movie to find that information. I focused more on various functions and visual design to give the feeling of easily finding information about the movie.
-### Features
+
+## Features
 |Feature|Screenshots / Description|
 |:--:|:--|
 |Scroll Event|<img src="https://user-images.githubusercontent.com/106734133/174793737-4a9dba02-a9bc-4c75-816c-a69945b4ce74.gif" alt="Scroll Event" height="300"/><br>Previously, an event was automatically triggered when the user's scroll position value was reached. This time, unlike other projects, I put on the element styling:<br><br>```style={{transform: `translate3d(${element.getBoundingClientRect().top / 10}px, 0, 0px)`, opacity: `${element.getBoundingClientRect().top === 0 ? 1:1 - (element.getBoundingClientRect().top / 3 * .01)}`}}```<br><br> This allows the user to see the smooth animation effect in its current progressive form whenever passing the current scrolled value.|
@@ -22,9 +24,10 @@ Cinema Movie fetches movie information from The Movie Database and shares the in
 |URL Searching|<img src="https://user-images.githubusercontent.com/106734133/174904682-e5814a57-1972-4166-ac26-018c035b0eaa.gif" alt="URL Searching" height="300" /><br>You can search for a movie by entering the movie title in the URL. Use `useParams()` to enter the movie title in the `:id` part of `/movie/:id`. Then it will lists movies on the page by requesting the `:id` value from the server.<br><br>Web pages supported by GitHub cannot search for movies through URLs. URL search is not available on GitHub because the website I've created doesn't have a document that goes to the html file.<br><br>To use the URL searching feature, directly clone cinema-movie and use it at `http://localhost:3000/cinema-movie/movie/{:id}`.|
 |Responsive|<img src="https://user-images.githubusercontent.com/106734133/174692296-77b41909-4c5c-4d4b-8856-3da6c2e7fdfa.jpg" alt="Responsive" height="300" /><br>Because of the feature that shows 4 movies per slide, the poster may look very small when you see the poster through the mobile screen. So the styling I've chosen is to list two movies in two columns per slide.|
 
-### Technologies Used
+## Technologies Used
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
-### Installation
+
+## Installation
 1. Clone the repository
 ```
 git clone https://github.com/SunilPark1129/cinema-movie.git
@@ -41,5 +44,12 @@ install npm
 ```
 npm start
 ```
-### Project Status
+
+## That can be improved
+- I need to improve the naming of files and folders so that other developers can see and understand their meaning at once.
+- I need to learn more about which folder to put the files in.
+- I need to make more reusable React Hooks and UI components of repetitive coding.
+- In order to improve website speed, I should become more proficient in the usage of useState, useEffect, and rendering.
+
+## Project Status
 Completed
