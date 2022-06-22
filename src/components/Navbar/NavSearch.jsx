@@ -63,9 +63,14 @@ const SearchQuery = () => {
         if (inputEl.current.value !== '') {
             // Prevents errors in URLs when navigating to a page.
             let movieURL = '';
+            console.log(inputEl.current.value)
             if (inputEl.current.value.includes('/')) {
                 movieURL = inputEl.current.value.replaceAll('/', ' ');
-            } else {
+            }
+            else if (inputEl.current.value.includes('&amp;')) {
+                movieURL = inputEl.current.value.replaceAll('&amp;', '&');
+            }
+            else {
                 movieURL = inputEl.current.value;
             }
             inputEl.current.value = '';
