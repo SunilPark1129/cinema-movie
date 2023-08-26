@@ -1,6 +1,7 @@
 # Cinema Movie
 ![Cinema movie banner](https://user-images.githubusercontent.com/106734133/174794369-79747bcd-9f0e-43d8-9bee-28e37ae55167.jpg)
-Check preview website - [Link](https://sunilpark1129.github.io/cinema-movie/)
+Check preview website - [Link](https://sunilpark1129.github.io/cinema-movie/)<br>
+Go to updated version website - [Link](https://github.com/SunilPark1129/c-movie-today)
 
 ## Project Description
 Cinema Movie fetches movie information from The Movie Database and shares the information with users on a new platform. You can search for a movie through this website or click on a recommended movie to find that information. I focused more on various functions and visual design to give the feeling of easily finding information about the movie.
